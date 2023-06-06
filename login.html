@@ -11,16 +11,17 @@
       src="https://kit.fontawesome.com/be378e2dae.js"
       crossorigin="anonymous"
     ></script>
-    <script defer src="login.js"></script>
-    <title>Login - TechnoApp</title>
+    <script defer src="account.js"></script>
+    <title>Login - TechKnows</title>
   </head>
   <body>
+    <div class="image"><img src="images/polytech.jpg" alt="" /></div>
     <div class="login-container">
       <div class="login-content-container">
         <!-- Logo - Login -->
         <div class="logo-container">
           <a href="index.html">
-            <h4>Techno<span>App</span></h4>
+            <h4>Tech<span>Knows</span></h4>
           </a>
           <div class="socmed-container">
             <a href="#">
@@ -35,15 +36,11 @@
           </div>
         </div>
         <!-- Form - Login -->
-        <form action="/" method="post">
-          <input id="username" type="text" placeholder="Username" required />
-          <input
-            id="password"
-            type="password"
-            placeholder="Password"
-            required
-          />
-          <input id="login" type="submit" value="LOG IN" />
+        <form onsubmit="login()">
+          <input id="username" type="text" placeholder="Username" />
+          <input id="password" type="password" placeholder="Password" />
+          <button type="submit" id="btns">LOG IN</button>
+          <p class="text"></p>
         </form>
         <a href="signup.html"><button>SIGN UP</button></a>
       </div>

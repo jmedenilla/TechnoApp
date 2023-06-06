@@ -11,9 +11,11 @@
       src="https://kit.fontawesome.com/be378e2dae.js"
       crossorigin="anonymous"
     ></script>
-    <title>Signup - TechnoApp</title>
+    <script defer src="account.js"></script>
+    <title>Signup - TechKnows</title>
   </head>
   <body>
+    <div class="image"><img src="images/polytech.jpg" alt="" /></div>
     <div class="signup-container">
       <div class="logo-container">
         <a href="index.html">
@@ -22,12 +24,11 @@
       </div>
       <div class="content-container">
         <h1>REGISTER NOW</h1>
-        <form action="submit">
-          <input type="text" placeholder="Full name" />
-          <input type="number" placeholder="ID Number" />
-          <input type="text" placeholder="Username" />
-          <input type="password" placeholder="Password" />
-          <button>SIGN UP</button>
+        <form onsubmit="signup()">
+          <input type="email" placeholder="Email" id="email" />
+          <input type="text" placeholder="Username" id="username" />
+          <input type="password" placeholder="Password" id="password" />
+          <button type="submit" id="btns">SIGN UP</button>
         </form>
         <h4>
           Have an account?

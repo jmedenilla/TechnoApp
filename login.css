@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 :root {
-  --main--violet-color: #9b2dde;
   --main--pink-color: #ffc2c2;
+  --main--violet-color: #6f00fd;
 }
 * {
   margin: 0;
@@ -9,26 +9,37 @@
   box-sizing: border-box;
 }
 body {
-  background-color: var(--main--pink-color);
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Poppins";
+  overflow: hidden;
+}
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.image > img {
+  width: 100%;
 }
 .login-container {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.4)
+  );
   width: 60%;
   height: 80vh;
-  background: linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.1)
-  );
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  backdrop-filter: blur(30px);
 }
 .login-content-container {
   width: 75%;
@@ -70,6 +81,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+.login-container > form > input:active,
+.login-container > form > input:focus {
+  background-color: transparent;
+}
 .login-content-container > form > input:nth-child(1),
 .login-content-container > form > input:nth-child(2) {
   font-size: 0.9rem;
@@ -83,7 +98,7 @@ body {
 .login-content-container > form > input:nth-child(2) {
   margin-top: 40px;
 }
-.login-content-container > form > input:nth-child(3) {
+.login-content-container > form > button {
   padding: 0.9rem 0;
   font-size: 1.4rem;
   font-weight: 700;
@@ -94,9 +109,9 @@ body {
   margin-top: 90px;
   transition: all ease 0.2s;
 }
-.login-content-container > form > input:nth-child(3):hover {
-  background-color: #bb72e8;
-  border-color: #bb72e8;
+.login-content-container > form > button:hover {
+  background-color: #8f39ff;
+  border-color: #8f39ff;
 }
 .login-content-container a > button {
   width: 100%;
